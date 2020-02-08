@@ -3,10 +3,9 @@
   border: double 1px #000;
 }
 .users-td th {
-  /* font-size: 13px; */
+  font-size: 11px;
+  height: 20px;
   border: dotted 1px rgb(68, 62, 62);
-  /* width: 100px;
-  text-align: center; */
 }
 
 .users-td td {
@@ -18,8 +17,10 @@
 }
 
 .users-td .data-td {
-  color: green;
   width: 400px;
   font-size: 12px;
   text-align: start;
+}
+.pipe-div {
+  margin: 40px 0 10px 0;
 }

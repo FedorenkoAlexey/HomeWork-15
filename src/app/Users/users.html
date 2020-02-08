@@ -19,3 +19,24 @@
     <td class="data-td">{{user.date}}</td>
   </tr>
 </table>
+
+<div class="pipe-div">Whis Pipes</div>
+<table class="users-td">
+  <tr>
+    <th>UserID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Balance</th>
+    <th>Phone</th>
+    <th>Data</th>
+  </tr>
+
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.firstName | myUpperCase}}</td>
+    <td>{{user.lastName | myUpperCase}}</td>
+    <td>{{user.balance | myCurrency}}</td>
+    <td>{{user.phone}}</td>
+    <td class="data-t">{{user.date | date: "dd-MM-yyyy"}}</td>
+  </tr>
+</table>
