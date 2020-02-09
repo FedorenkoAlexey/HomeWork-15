@@ -28,8 +28,20 @@
 .zoom {
   height: 25px;
   width: 250px;
+  font-size: 12px;
 }
 .clicked {
   background-color: rgb(100, 100, 185);
   color: aqua;
+}
+
+.user-btn {
+  margin-top: 20px;
+}
+.timeout {
+  width: 350px;
+  height: 170px;
+  font-size: 12px;
+  border: 1px solid black;
+  margin-bottom: 20px;
 }

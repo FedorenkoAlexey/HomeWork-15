@@ -8,6 +8,8 @@ import { UpperPipe } from "./pipes/upper.pipe";
 import { BalanceColorDirective } from "./attribDirect/balanceColor.directive";
 import { ZoomDirective } from "./attribDirect/zoom.directive";
 import { ClickColorDirective } from "./attribDirect/click-color.directive";
+import { MyIfDirective } from "./structDirect/myIf.directive";
+import { TimeoutDirective } from "./structDirect/timeout.directive";
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ClickColorDirective } from "./attribDirect/click-color.directive";
     UpperPipe,
     BalanceColorDirective,
     ZoomDirective,
-    ClickColorDirective
+    ClickColorDirective,
+    MyIfDirective,
+    TimeoutDirective
   ],
   imports: [BrowserModule],
   providers: [],

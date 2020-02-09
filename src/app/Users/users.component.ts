@@ -10,11 +10,17 @@ import { UserService } from "./user.service";
 export class UsersComponent implements OnInit {
   users: User[];
   curColor = "";
+  isActive: boolean = true;
 
   constructor(private userService: UserService) {}
 
   private getUsers(): void {
     this.users = this.userService.getUsers();
+  }
+
+  onShowUsers(): void {
+    this.isActive = !this.isActive;
+    // console.log(this.isActive);
   }
 
   ngOnInit() {
