@@ -1,4 +1,6 @@
-<div class="zoom" zoom>This text zoom when you hover</div>
+<div class="zoom" zoom>
+  This text zoom when you hover (Attribute Directive)
+</div>
 
 <div class="container">
   <div class="timeout">
@@ -42,7 +44,7 @@
 </div>
 
 <div *myIf="!isActive" class="pipe-div">
-  Whith Pipes
+  Whith Pipes & Attribute Directive: color balance
   <table class="users-td">
     <tr>
       <th>UserID</th>
@@ -55,7 +57,8 @@
     <tr *ngFor="let user of users">
       <td>{{user.id | myFibonacci}}</td>
       <td>{{user.firstName | myUpperCase}}</td>
-      <td [color]="curColor">{{user.balance | myCurrency}}</td>
+      <!-- <td [color]="curColor">{{user.balance | myCurrency}}</td> -->
+      <td color>{{user.balance | myCurrency}}</td>
       <td>{{user.phone}}</td>
       <td class="data-t">{{user.date | date: "dd-MM-yyyy"}}</td>
     </tr>
