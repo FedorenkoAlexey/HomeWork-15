@@ -1,31 +1,33 @@
+<div class="zoom" zoom>This text zoom when you hover</div>
+
 <div>Users</div>
 
 <table class="users-td">
   <tr>
     <th>UserID</th>
-    <th>First Name</th>
-    <th>Last Name</th>
+    <th>Name</th>
+    <!-- <th>Last Name</th> -->
     <th>Balance</th>
     <th>Phone</th>
     <th>Data</th>
   </tr>
 
   <tr *ngFor="let user of users">
-    <td>{{user.id}}</td>
-    <td>{{user.firstName}}</td>
-    <td>{{user.lastName}}</td>
-    <td>{{user.balance}}</td>
-    <td>{{user.phone}}</td>
-    <td class="data-td">{{user.date}}</td>
+    <td myClickColor>{{user.id}}</td>
+    <td myClickColor>{{user.firstName}}</td>
+    <!-- <td>{{user.lastName}}</td> -->
+    <td myClickColor>{{user.balance}}</td>
+    <td myClickColor>{{user.phone}}</td>
+    <td myClickColor class="data-td">{{user.date}}</td>
   </tr>
 </table>
 
-<div class="pipe-div">Whis Pipes</div>
+<div class="pipe-div">Whith Pipes</div>
 <table class="users-td">
   <tr>
     <th>UserID</th>
-    <th>First Name</th>
-    <th>Last Name</th>
+    <th>Name</th>
+    <!-- <th>Last Name</th> -->
     <th>Balance</th>
     <th>Phone</th>
     <th>Data</th>
@@ -34,8 +36,8 @@
   <tr *ngFor="let user of users">
     <td>{{user.id}}</td>
     <td>{{user.firstName | myUpperCase}}</td>
-    <td>{{user.lastName | myUpperCase}}</td>
-    <td>{{user.balance | myCurrency}}</td>
+    <!-- <td>{{user.lastName | myUpperCase}}</td> -->
+    <td [color]="curColor">{{user.balance | myCurrency}}</td>
     <td>{{user.phone}}</td>
     <td class="data-t">{{user.date | date: "dd-MM-yyyy"}}</td>
   </tr>

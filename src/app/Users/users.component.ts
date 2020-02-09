@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output } from "@angular/core";
 import { User } from "../users";
 import { UserService } from "./user.service";
 
@@ -9,11 +9,7 @@ import { UserService } from "./user.service";
 })
 export class UsersComponent implements OnInit {
   users: User[];
-  // isActive: boolean = true;
-
-  // onShowUsers(): void {
-  //   this.isActive = !this.isActive;
-  // }
+  curColor = "";
 
   constructor(private userService: UserService) {}
 
@@ -23,5 +19,6 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
     this.getUsers();
+    this.curColor = "green";
   }
 }

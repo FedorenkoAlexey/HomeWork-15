@@ -24,3 +24,12 @@
 .pipe-div {
   margin: 40px 0 10px 0;
 }
+
+.zoom {
+  height: 25px;
+  width: 250px;
+}
+.clicked {
+  background-color: rgb(100, 100, 185);
+  color: aqua;
+}
