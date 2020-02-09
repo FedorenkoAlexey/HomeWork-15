@@ -1,11 +1,18 @@
 <div class="zoom" zoom>This text zoom when you hover</div>
-<div class="timeout">
-  <p *myTimeout="500"><b>This is Structural Directive</b></p>
-  <p *myTimeout="1000">The field is added after 1.0 seconds</p>
-  <p *myTimeout="1500">The field is added after 1.5 seconds</p>
-  <p *myTimeout="2000">The field is added after 2.0 seconds</p>
-  <p *myTimeout="2500">The field is added after 2.5 seconds</p>
-  <p *myTimeout="3000">The field is added after 3.0 seconds</p>
+
+<div class="container">
+  <div class="timeout">
+    <p *myTimeout="500"><b>This is Structural Directive</b></p>
+    <p *myTimeout="1000">The field is added after 1.0 seconds</p>
+    <p *myTimeout="1500">The field is added after 1.5 seconds</p>
+    <p *myTimeout="2000">The field is added after 2.0 seconds</p>
+    <p *myTimeout="2500">The field is added after 2.5 seconds</p>
+    <p *myTimeout="3000">The field is added after 3.0 seconds</p>
+  </div>
+
+  <div class="repeat">
+    <p *myRepeat="repeat">Hello, world. Repeat 6 times</p>
+  </div>
 </div>
 
 <div>Users (clickable fields Attribute Directives)</div>
@@ -14,7 +21,6 @@
   <tr>
     <th>UserID</th>
     <th>Name</th>
-    <!-- <th>Last Name</th> -->
     <th>Balance</th>
     <th>Phone</th>
     <th>Data</th>
@@ -23,7 +29,6 @@
   <tr *ngFor="let user of users">
     <td myClickColor>{{user.id}}</td>
     <td myClickColor>{{user.firstName}}</td>
-    <!-- <td>{{user.lastName}}</td> -->
     <td myClickColor>{{user.balance}}</td>
     <td myClickColor>{{user.phone}}</td>
     <td myClickColor class="data-td">{{user.date}}</td>
@@ -42,16 +47,14 @@
     <tr>
       <th>UserID</th>
       <th>Name</th>
-      <!-- <th>Last Name</th> -->
       <th>Balance</th>
       <th>Phone</th>
       <th>Data</th>
     </tr>
 
     <tr *ngFor="let user of users">
-      <td>{{user.id}}</td>
+      <td>{{user.id | myFibonacci}}</td>
       <td>{{user.firstName | myUpperCase}}</td>
-      <!-- <td>{{user.lastName | myUpperCase}}</td> -->
       <td [color]="curColor">{{user.balance | myCurrency}}</td>
       <td>{{user.phone}}</td>
       <td class="data-t">{{user.date | date: "dd-MM-yyyy"}}</td>

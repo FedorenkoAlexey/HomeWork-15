@@ -10,6 +10,7 @@ import { UserService } from "./user.service";
 export class UsersComponent implements OnInit {
   users: User[];
   curColor = "";
+  repeat = 6;
   isActive: boolean = true;
 
   constructor(private userService: UserService) {}

@@ -19,7 +19,7 @@ export const USERS: User[] = [
     lastName: "Howell",
     sex: "Female",
     age: 21,
-    balance: 185,
+    balance: -185,
     phone: "1-920-326-3115",
     date: new Date(2019, 7, 15)
   },

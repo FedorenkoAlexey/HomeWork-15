@@ -10,6 +10,8 @@ import { ZoomDirective } from "./attribDirect/zoom.directive";
 import { ClickColorDirective } from "./attribDirect/click-color.directive";
 import { MyIfDirective } from "./structDirect/myIf.directive";
 import { TimeoutDirective } from "./structDirect/timeout.directive";
+import { RepeatDirective } from "./structDirect/repeat.directive";
+import { FibonacciPipe } from "./pipes/fibonacci.pipe";
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { TimeoutDirective } from "./structDirect/timeout.directive";
     UsersComponent,
     CurrencyPipe,
     UpperPipe,
+    FibonacciPipe,
     BalanceColorDirective,
     ZoomDirective,
     ClickColorDirective,
     MyIfDirective,
-    TimeoutDirective
+    TimeoutDirective,
+    RepeatDirective
   ],
   imports: [BrowserModule],
   providers: [],
